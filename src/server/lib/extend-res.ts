@@ -8,6 +8,7 @@ export default function extendRes(req, res) {
       return res.json({ url })
     }
     res.status(302).setHeader("Location", url)
-    return res.end()
+    res.end()
+    return res
   }
 }
